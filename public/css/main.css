@@ -1,0 +1,49 @@
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+
+#container .nopadding{
+	padding:0px;
+}
+
+#container .nomargin{
+	margin:0px;
+}
+
+header{
+	padding-top:10px;
+}
+
+#search{
+	padding-top:40px;
+}
+
+footer{
+	padding:40px 20px;
+	background:#ddd;
+}
+
+.beian{
+	text-align:left;
+}
+
+.links a{
+	display:block;
+	margin-right:20px;
+	float:left;
+}
+
+#container .videos{
+	border:solid 1px #ddd;
+}
+
+#container .videos td{
+	padding:15px;
+}
+
+#container .videos tr:hover{
+	background:#eee;
+}
+
+#container .ck{
+	height:450px;
+	background:#111;
+}

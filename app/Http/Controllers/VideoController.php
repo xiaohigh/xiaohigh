@@ -55,11 +55,11 @@ class VideoController extends Controller
         //鉴权对象创建
         $auth = new Auth(Config::get('qiniu.AccessKey'), Config::get('qiniu.SecretKey'));
         //
-        $pfopOps = "avthumb/m3u8/segtime/5/ab/128k/ar/44100/acodec/libfaac/r/30/vb/240k/vcodec/libx264/stripmeta/0";
+        $pfopOps = "avthumb/m3u8/segtime/5/ab/128k/ar/44100/acodec/libfaac/r/30/vb/640k/vcodec/libx264/stripmeta/0";
         $policy = array(
             'persistentOps' => $pfopOps,
             'persistentPipeline' => Config::get('qiniu.pipeline'),
-            'persistentNotifyUrl' => 'http://xiaohigh.com/video/status',
+            'persistentNotifyUrl' => 'http://xdl.xiaohigh.com',
         );
 
         $upToken = $auth->uploadToken($bucket, null, 3600, $policy);
@@ -83,7 +83,41 @@ class VideoController extends Controller
      */
     public function callbacks()
     {
+        //获取请求内容
         $_body = file_get_contents('php://input');
-        $body = json_decode($_body, true);
+        //进行json解析
+        $data = json_decode($_body, true);
+        //查看数据
+        $video = Video::where('video',$data['inputKey'])->firstOrFail();
+        //
+        $video -> m3u8 = $data['items'][0]['key'];
+        if($video -> save()) {
+            return 'ok';
+        }else{
+            return 'fail';
+        }
     }
+
+    /**
+     * 视频显示
+     */
+    public function show($id)
+    {
+        $video = Video::findOrFail($id);
+        $video->m3u8 = $this->format($video->m3u8);
+        return view('home.video.show', ['video'=>$video]);
+    }
+
+    /**
+     * 格式化url地址
+     */
+    private function format($url)
+    {
+        //
+        $bucket = Config::get('qiniu.bucket');
+        return Config::get('qiniu.map.'.$bucket).'/'.$url;
+    }
+
+
+
 }

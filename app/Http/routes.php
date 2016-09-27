@@ -22,4 +22,6 @@ Route::get('/admin', 'AdminController@index');
 Route::controller('/admin/video', 'VideoController');
 
 //异步通知接口
-Route::get('/video/status', 'VideoController@callbacks');
+Route::post('/video/callback', 'VideoController@callbacks');
+
+Route::get('/v/{id}', 'VideoController@show')->where('id','\d+');
