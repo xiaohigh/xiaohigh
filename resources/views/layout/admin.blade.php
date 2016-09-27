@@ -29,7 +29,9 @@
     <link href="{{asset('/backend/bower_components/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
     <link href="{{asset('/backend/dist/css/main.css')}}" rel="stylesheet" type="text/css">
-
+    
+    @section('js')
+    @show
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -308,7 +310,11 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            
+            @section('content')
+            <div class="row">
+                
+            </div>
+            @show
         </div>
         <!-- /#page-wrapper -->
 

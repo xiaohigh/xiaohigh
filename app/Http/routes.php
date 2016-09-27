@@ -20,3 +20,6 @@ Route::get('/admin', 'AdminController@index');
 
 //视频管理
 Route::controller('/admin/video', 'VideoController');
+
+//异步通知接口
+Route::get('/video/status', 'VideoController@callbacks');
