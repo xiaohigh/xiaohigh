@@ -59,7 +59,7 @@ class VideoController extends Controller
         $policy = array(
             'persistentOps' => $pfopOps,
             'persistentPipeline' => Config::get('qiniu.pipeline'),
-            'persistentNotifyUrl' => 'http://xdl.xiaohigh.com',
+            'persistentNotifyUrl' => 'http://xiaohigh.com/video/callback',
         );
 
         $upToken = $auth->uploadToken($bucket, null, 3600, $policy);
@@ -85,6 +85,7 @@ class VideoController extends Controller
     {
         //获取请求内容
         $_body = file_get_contents('php://input');
+        file_put_contents('./video-status.dat', $_body."\r\n\r\n", $_body);
         //进行json解析
         $data = json_decode($_body, true);
         //查看数据
