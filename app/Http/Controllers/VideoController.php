@@ -85,7 +85,7 @@ class VideoController extends Controller
     {
         //获取请求内容
         $_body = file_get_contents('php://input');
-        file_put_contents('./video-status.dat', $_body."\r\n\r\n", $_body);
+        file_put_contents('./video-status.dat', $_body."\r\n\r\n", FILE_APPEND);
         //进行json解析
         $data = json_decode($_body, true);
         //查看数据
