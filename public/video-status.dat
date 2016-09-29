@@ -1,0 +1,2 @@
+{"id":"z0.57ea229045a2652644b5188c","pipeline":"1380872652.hls-videos","code":0,"desc":"The fop was completed successfully","reqid":"Dn8AAHjOGlwwHngU","inputBucket":"videos","inputKey":"Fk4e5YWEKYpm88f7N0GWM9cpaowN","items":[{"cmd":"avthumb/m3u8/segtime/5/ab/128k/ar/44100/acodec/libfaac/r/30/vb/240k/vcodec/libx264/stripmeta/0","code":0,"desc":"The fop was completed successfully","hash":"FlGmOcRnzfLqxXir9nbBn5o25S0E","key":"qgGg89UBfmSi-_ho7bIqxi9rH5E=/Fk4e5YWEKYpm88f7N0GWM9cpaowN","returnOld":0}]}
+

@@ -5,7 +5,7 @@
 		'SecretKey' => 'eV8xhk7VZ-zhJciD9d74I6T59zEGvXVQ7KDrcr5X',
 		//bucket对应的域名
 		'map' => [
-			'videos' => 'http://odq99fvnh.bkt.clouddn.com',
+			'videos' => 'http://cdn.xiaohigh.com',
 		],
 		//c仓库名称
 		'bucket' => 'videos',
