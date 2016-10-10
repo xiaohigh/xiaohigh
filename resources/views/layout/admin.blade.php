@@ -295,7 +295,20 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                        
+
+                        <li>
+                            <a href="#"><i class="fa fa-play fa-fw"></i> 系列管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{url('/admin/serie/add')}}">系列添加</a>
+                                </li>
+                                <li>
+                                    <a href="{{url('/admin/serie/list')}}">系列列表</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

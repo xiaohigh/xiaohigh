@@ -118,6 +118,10 @@ class VideoController extends Controller
         $bucket = Config::get('qiniu.bucket');
         return Config::get('qiniu.map.'.$bucket).'/'.$url;
     }
+    
+    /**
+     *
+     */
 
 
 

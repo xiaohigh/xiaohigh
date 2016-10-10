@@ -15,11 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//后台首页显示
-Route::get('/admin', 'AdminController@index');
+Route::group([], function(){
 
-//视频管理
-Route::controller('/admin/video', 'VideoController');
+    //后台首页显示
+    Route::get('/admin', 'AdminController@index');
+
+    //视频管理
+    Route::controller('/admin/video', 'VideoController');
+
+    //系列管理
+    Route::controller('/admin/serie','SerieController');
+
+});
 
 //异步通知接口
 Route::post('/video/callback', 'VideoController@callbacks');

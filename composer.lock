@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "daaf0f79a7d886fbbc6c7ce6b7408b3f",
     "content-hash": "9fa013f976cf03f8ee4317bf8f8c8d0d",
     "packages": [
         {
@@ -364,16 +363,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.44",
+            "version": "v5.1.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "37b3488e49e5b4a86a21186b171826dd93961ccd"
+                "reference": "cea4ea25ee758ed891b3449b851f9c8f7f37f3db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/laravel/framework/37b3488e49e5b4a86a21186b171826dd93961ccd.zip",
-                "reference": "37b3488e49e5b4a86a21186b171826dd93961ccd",
+                "url": "https://packagist.phpcomposer.com/files/laravel/framework/cea4ea25ee758ed891b3449b851f9c8f7f37f3db.zip",
+                "reference": "cea4ea25ee758ed891b3449b851f9c8f7f37f3db",
                 "shasum": ""
             },
             "require": {
@@ -489,7 +488,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-09-20 13:47:37"
+            "time": "2016-09-29 13:45:07"
         },
         {
             "name": "league/flysystem",
@@ -2390,16 +2389,16 @@
         },
         {
             "name": "phpspec/phpspec",
-            "version": "2.5.2",
+            "version": "2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "7e7e104de01b5052195cefefcd0b29f1add4c116"
+                "reference": "153ebd99d9b842e0c99a024c41f970d79db46475"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/phpspec/phpspec/7e7e104de01b5052195cefefcd0b29f1add4c116.zip",
-                "reference": "7e7e104de01b5052195cefefcd0b29f1add4c116",
+                "url": "https://packagist.phpcomposer.com/files/phpspec/phpspec/153ebd99d9b842e0c99a024c41f970d79db46475.zip",
+                "reference": "153ebd99d9b842e0c99a024c41f970d79db46475",
                 "shasum": ""
             },
             "require": {
@@ -2464,7 +2463,7 @@
                 "testing",
                 "tests"
             ],
-            "time": "2016-09-04 11:59:15"
+            "time": "2016-09-26 20:28:11"
         },
         {
             "name": "phpspec/prophecy",
